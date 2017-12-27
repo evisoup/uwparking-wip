@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UWATERLOO PARKING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUv-Wy-iev">
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchcar_meitu_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="xy4-tv-haC">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="F8I-35-o5i"/>
+                                    <constraint firstAttribute="width" constant="200" id="Otn-rv-F05"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.80392156859999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oUv-Wy-iev" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Q8d-PY-92F"/>
+                            <constraint firstItem="oUv-Wy-iev" firstAttribute="top" secondItem="xy4-tv-haC" secondAttribute="bottom" constant="8" id="eVo-hB-wma"/>
+                            <constraint firstItem="xy4-tv-haC" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="194" id="mhD-5n-tkv"/>
+                            <constraint firstItem="xy4-tv-haC" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="udg-Rb-mMB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="182"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launchcar_meitu_1.png" width="200" height="114"/>
+    </resources>
+</document>
