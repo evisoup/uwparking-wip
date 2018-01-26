@@ -104,14 +104,5 @@ class Receiver {
         
         task.resume()
         //return (num,total,percentage)
-        
     }
-    
-    
-    
-    
-    
-    
-    
-    
 }
