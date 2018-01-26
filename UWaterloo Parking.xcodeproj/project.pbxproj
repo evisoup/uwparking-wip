@@ -37,6 +37,8 @@
 		B7BABA651C8CBEB300699A75 /* buildingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BABA641C8CBEB300699A75 /* buildingData.swift */; };
 		B7BABA691C8D13F500699A75 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BABA681C8D13F500699A75 /* arrow.png */; };
 		B7BF26721EC9564F00203ABA /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF26711EC9564F00203ABA /* APIHandler.swift */; };
+		B7D38D7F201AE1690005A688 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D38D7E201AE1690005A688 /* APIKey.swift */; };
+		B7D38D80201AE1690005A688 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D38D7E201AE1690005A688 /* APIKey.swift */; };
 		FC7DE2311C8FB0AD00E22AC0 /* launchcar.png in Resources */ = {isa = PBXBuildFile; fileRef = FC7DE2301C8FB0AD00E22AC0 /* launchcar.png */; };
 		FCBAF6631C7684B6003AB4B7 /* Percentage-50.png in Resources */ = {isa = PBXBuildFile; fileRef = FCBAF6611C7684B6003AB4B7 /* Percentage-50.png */; };
 		FCBAF6651C7685A5003AB4B7 /* Car-50.png in Resources */ = {isa = PBXBuildFile; fileRef = FCBAF6641C7685A5003AB4B7 /* Car-50.png */; };
@@ -98,6 +100,7 @@
 		B7BABA641C8CBEB300699A75 /* buildingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buildingData.swift; sourceTree = "<group>"; };
 		B7BABA681C8D13F500699A75 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		B7BF26711EC9564F00203ABA /* APIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		B7D38D7E201AE1690005A688 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		FC7DE2301C8FB0AD00E22AC0 /* launchcar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchcar.png; sourceTree = "<group>"; };
 		FCBAF6611C7684B6003AB4B7 /* Percentage-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Percentage-50.png"; sourceTree = "<group>"; };
 		FCBAF6641C7685A5003AB4B7 /* Car-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Car-50.png"; sourceTree = "<group>"; };
@@ -146,6 +149,7 @@
 				5D51897D1C7547EB0062CEFF /* APIManager.swift */,
 				B72CB0031FD6468000C171FD /* jsonParser.swift */,
 				B72CB0061FD64FFB00C171FD /* ApiRequester.swift */,
+				B7D38D7E201AE1690005A688 /* APIKey.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -365,6 +369,7 @@
 				B72CB0071FD64FFB00C171FD /* ApiRequester.swift in Sources */,
 				B7BF26721EC9564F00203ABA /* APIHandler.swift in Sources */,
 				B783B2651C74E13600A3B108 /* SearchViewController.swift in Sources */,
+				B7D38D7F201AE1690005A688 /* APIKey.swift in Sources */,
 				B783B26B1C7519CD00A3B108 /* LotsDetailController.swift in Sources */,
 				B783B2671C74E14700A3B108 /* PinViewController.swift in Sources */,
 				5D51897E1C7547EB0062CEFF /* APIManager.swift in Sources */,
@@ -384,6 +389,7 @@
 			files = (
 				B72CB0051FD6468000C171FD /* jsonParser.swift in Sources */,
 				B783B2771C7521AD00A3B108 /* TodayViewController.swift in Sources */,
+				B7D38D80201AE1690005A688 /* APIKey.swift in Sources */,
 				B72CB0081FD64FFB00C171FD /* ApiRequester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
