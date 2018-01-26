@@ -24,10 +24,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Always get your current location.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Get your current location.</string>
+	<string>Location access is required for displaying your current location in the app.</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
