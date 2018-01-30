@@ -15,8 +15,8 @@
 		6A01589E1C780BEE008E4E89 /* iconx.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A01589A1C780BEE008E4E89 /* iconx.png */; };
 		B72CB0041FD6468000C171FD /* jsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CB0031FD6468000C171FD /* jsonParser.swift */; };
 		B72CB0051FD6468000C171FD /* jsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CB0031FD6468000C171FD /* jsonParser.swift */; };
-		B72CB0071FD64FFB00C171FD /* ApiRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CB0061FD64FFB00C171FD /* ApiRequester.swift */; };
-		B72CB0081FD64FFB00C171FD /* ApiRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CB0061FD64FFB00C171FD /* ApiRequester.swift */; };
+		B72CB0071FD64FFB00C171FD /* APIRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CB0061FD64FFB00C171FD /* APIRequester.swift */; };
+		B72CB0081FD64FFB00C171FD /* APIRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CB0061FD64FFB00C171FD /* APIRequester.swift */; };
 		B73684111C77BEA2005BA6DA /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73684101C77BEA2005BA6DA /* KDCircularProgress.swift */; };
 		B783B24D1C74DC7900A3B108 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B783B24C1C74DC7900A3B108 /* AppDelegate.swift */; };
 		B783B2541C74DC7900A3B108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B783B2521C74DC7900A3B108 /* Main.storyboard */; };
@@ -76,7 +76,7 @@
 		6A0158991C780BEE008E4E89 /* iconw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconw.png; sourceTree = "<group>"; };
 		6A01589A1C780BEE008E4E89 /* iconx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconx.png; sourceTree = "<group>"; };
 		B72CB0031FD6468000C171FD /* jsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonParser.swift; sourceTree = "<group>"; };
-		B72CB0061FD64FFB00C171FD /* ApiRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequester.swift; sourceTree = "<group>"; };
+		B72CB0061FD64FFB00C171FD /* APIRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequester.swift; sourceTree = "<group>"; };
 		B73684101C77BEA2005BA6DA /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 		B783B2491C74DC7900A3B108 /* UWaterloo Parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UWaterloo Parking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B783B24C1C74DC7900A3B108 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 				5D51897B1C7547D70062CEFF /* SwiftyJSON.swift */,
 				5D51897D1C7547EB0062CEFF /* APIManager.swift */,
 				B72CB0031FD6468000C171FD /* jsonParser.swift */,
-				B72CB0061FD64FFB00C171FD /* ApiRequester.swift */,
+				B72CB0061FD64FFB00C171FD /* APIRequester.swift */,
 				B7D38D7E201AE1690005A688 /* APIKey.swift */,
 			);
 			path = Model;
@@ -366,7 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7BABA651C8CBEB300699A75 /* buildingData.swift in Sources */,
-				B72CB0071FD64FFB00C171FD /* ApiRequester.swift in Sources */,
+				B72CB0071FD64FFB00C171FD /* APIRequester.swift in Sources */,
 				B7BF26721EC9564F00203ABA /* APIHandler.swift in Sources */,
 				B783B2651C74E13600A3B108 /* SearchViewController.swift in Sources */,
 				B7D38D7F201AE1690005A688 /* APIKey.swift in Sources */,
@@ -390,7 +390,7 @@
 				B72CB0051FD6468000C171FD /* jsonParser.swift in Sources */,
 				B783B2771C7521AD00A3B108 /* TodayViewController.swift in Sources */,
 				B7D38D80201AE1690005A688 /* APIKey.swift in Sources */,
-				B72CB0081FD64FFB00C171FD /* ApiRequester.swift in Sources */,
+				B72CB0081FD64FFB00C171FD /* APIRequester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

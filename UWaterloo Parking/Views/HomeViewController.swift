@@ -8,6 +8,15 @@
 
 import UIKit
 
+// MARK: - Private Constants
+
+private let C_LOT_DETAILS = "cDetails"
+private let N_LOT_DETAILS = "nDetails"
+private let W_LOT_DETAILS = "wDetails"
+private let X_LOT_DETAILS = "xDetails"
+
+// MARK: - HomeViewController
+
 class HomeViewController: UIViewController {
     
     @IBOutlet var actind: UIActivityIndicatorView!
@@ -33,21 +42,12 @@ class HomeViewController: UIViewController {
     @IBAction func myRefresh(_ sender: AnyObject) {
         actind.startAnimating()
         updateUI()
-        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "UWATERLOO PARKING"
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.willEnterForground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-        
-        // updateUI()
-    }
-    
-    func willEnterForground() {
-        //updateUI()
+        navigationItem.title = "UWATERLOO PARKING"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,62 +57,61 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // TODO: 改到switch
-        if(segue.identifier == "cDetails" ){
-            if let destinationVC = segue.destination as? LotsDetailController{
-                destinationVC.lotID  =  "C"
-            }
-        }
+        guard let identifier = segue.identifier else { return }
         
-        if(segue.identifier == "nDetails" ){
-            if let destinationVC = segue.destination as? LotsDetailController{
-                destinationVC.lotID  =  "N"
-            }
+        switch identifier {
+        case C_LOT_DETAILS, N_LOT_DETAILS, X_LOT_DETAILS, W_LOT_DETAILS:
+            guard let destination = segue.destination as? LotsDetailController else { break }
+            
+            destination.lotID = identifier.prefix(1).uppercased()
+        default:
+            break
         }
-        
-        if(segue.identifier == "xDetails" ){
-            if let destinationVC = segue.destination as? LotsDetailController{
-                destinationVC.lotID  =  "X"
-            }
-        }
-        
-        if(segue.identifier == "wDetails" ){
-            if let destinationVC = segue.destination as? LotsDetailController{
-                destinationVC.lotID  =  "W"
-            }
+    }
+}
+
+// MARK: - Private Extension
+
+private extension HomeViewController {
+    
+    func composeString(inputs: Int...) -> String {
+        switch inputs.count {
+        case 1:
+            return "\(inputs[0])%"
+        case 2:
+            return "\(inputs[0]) / \(inputs[1])"
+        default:
+            return ""
         }
     }
     
     func updateUI() {
-        UWApiCall.fetchParkingRequestResultV2(
+        UWAPICall.fetchParkingRequestResultV2(
             success: { [weak self] result in
                 print("牛逼成功了")
                 
                 DispatchQueue.main.async {
-            
-                    let _ = result.data.map {
+                    _ = result.data.map {
                         let count = $0.currentCount
                         let cap = $0.cap
                         let pct = $0.percentFilled
                         
+                        let capText = self?.composeString(inputs: count, cap)
+                        let pctText = self?.composeString(inputs: pct)
+                        
                         switch $0.lotName {
-                        case "C" :
-                            // TODO: 写一个string generator？
-                            self?.cCap.text = "\(count) / \(cap)"
-                            self?.cPct.text = "\(pct)%"
-                            
-                        case "N" :
-                            self?.nCap.text = "\(count) / \(cap)"
-                            self?.nPct.text = "\(pct)%"
-                            
-                        case "X" :
-                            self?.xCap.text = "\(count) / \(cap)"
-                            self?.xPct.text = "\(pct)%"
-                            
-                        case "W" :
-                            self?.wCap.text = "\(count) / \(cap)"
-                            self?.wPct.text = "\(pct)%"
-                            
+                        case LotName.C.rawValue :
+                            self?.cCap.text = capText
+                            self?.cPct.text = pctText
+                        case LotName.N.rawValue :
+                            self?.nCap.text = capText
+                            self?.nPct.text = pctText
+                        case LotName.X.rawValue :
+                            self?.xCap.text = capText
+                            self?.xPct.text = pctText
+                        case LotName.W.rawValue :
+                            self?.wCap.text = capText
+                            self?.wPct.text = pctText
                         default:
                             break
                         }
@@ -123,6 +122,5 @@ class HomeViewController: UIViewController {
                 print("call back failure")
         })
     }
-    
-///////
 }
+

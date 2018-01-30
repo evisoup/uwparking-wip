@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct UWApiCall {
+struct UWAPICall {
     
     private static let API_KEY = APIKey.Key
     private var fetching = false
@@ -32,7 +32,7 @@ struct UWApiCall {
 
         DispatchQueue.global(qos: .userInitiated).async {
             
-            URLSession.shared.dataTask(with: UWApiCall.getURL()) { data, response, err in
+            URLSession.shared.dataTask(with: UWAPICall.getURL()) { data, response, err in
                 guard let data = data else {
                     failure()
                     return

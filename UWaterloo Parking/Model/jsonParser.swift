@@ -41,3 +41,7 @@ struct UWParkingRequest: Codable {
     let meta: UWParkingMeta
     let data: [UWParkingData]
 }
+
+public enum LotName: String {
+    case C,N,W,X
+}
