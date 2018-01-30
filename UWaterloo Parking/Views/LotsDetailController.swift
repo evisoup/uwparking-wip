@@ -142,7 +142,7 @@ class LotsDetailController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func willEnterForground() {
+    @objc func willEnterForground() {
         update()
     }
 

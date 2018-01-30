@@ -56,7 +56,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
         self.setParkingLot("X")
     }
     
-    func willEnterForground() {
+    @objc func willEnterForground() {
         self.update()
     }
     

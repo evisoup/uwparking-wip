@@ -95,7 +95,7 @@ class InfoViewController: UIViewController {
     }
     
     
-    func willEnterForground() {
+    @objc func willEnterForground() {
         GetData()
     }
     

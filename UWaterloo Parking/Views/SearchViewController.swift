@@ -114,7 +114,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UISearchRes
         
     }
     
-    func willEnterForground() {
+    @objc func willEnterForground() {
         GetData()
     }
     

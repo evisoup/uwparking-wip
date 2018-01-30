@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-struct UWAPICall {
+class UWAPICaller {
     
-    private static let API_KEY = APIKey.Key
+    private let API_KEY = APIKey.Key
     private var fetching = false
     
-    static func getURL() -> URL {
+    func getURL() -> URL {
         // TODO: to remove
         //let urlString = "https://api.uwaterloo.ca/v2/parking/watpark.json?key="
         
@@ -28,22 +28,21 @@ struct UWAPICall {
         return components.url!
     }
     
-    static func fetchParkingRequestResultV2(success: @escaping (UWParkingRequest) -> Void , failure: @escaping () -> Void) {
-
-        DispatchQueue.global(qos: .userInitiated).async {
+    func fetchParkingRequestResultV2(success: @escaping (UWParkingRequest) -> Void , failure: @escaping () -> Void) {
+        guard fetching == false else { return }
+        
+        fetching = true
+        
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            guard let url = self?.getURL() else { self?.fetching = false; return }
             
-            URLSession.shared.dataTask(with: UWAPICall.getURL()) { data, response, err in
-                guard let data = data else {
-                    failure()
-                    return
-                }
+            URLSession.shared.dataTask(with: url) { data, response, err in
+                self?.fetching = false
+                guard let data = data else { failure(); return }
                 
                 do {
                     let parkingLotsRequest = try JSONDecoder().decode(UWParkingRequest.self, from: data)
-                    guard parkingLotsRequest.data.count == 4 else {
-                        failure()
-                        return
-                    }
+                    guard parkingLotsRequest.data.count == 4 else { failure(); return }
                     
                     success(parkingLotsRequest)
                 } catch let jsonParsingErr {

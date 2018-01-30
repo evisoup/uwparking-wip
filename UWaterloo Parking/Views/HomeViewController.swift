@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var xCap: UILabel!
     @IBOutlet var xPct: UILabel!
     
+    lazy private var uwAPICaller = UWAPICaller()
     
     @IBAction func toMap(_ sender: AnyObject) {
         tabBarController?.selectedIndex = 1
@@ -86,7 +87,7 @@ private extension HomeViewController {
     }
     
     func updateUI() {
-        UWAPICall.fetchParkingRequestResultV2(
+        uwAPICaller.fetchParkingRequestResultV2(
             success: { [weak self] result in
                 print("牛逼成功了")
                 
