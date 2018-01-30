@@ -41,7 +41,6 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func myRefresh(_ sender: AnyObject) {
-        actind.startAnimating()
         updateUI()
     }
 
@@ -49,6 +48,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "UWATERLOO PARKING"
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.willEnterForground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,6 +76,10 @@ class HomeViewController: UIViewController {
 
 private extension HomeViewController {
     
+    @objc func willEnterForground() {
+        updateUI()
+    }
+    
     func composeString(inputs: Int...) -> String {
         switch inputs.count {
         case 1:
@@ -87,6 +92,8 @@ private extension HomeViewController {
     }
     
     func updateUI() {
+        actind.startAnimating()
+        
         uwAPICaller.fetchParkingRequestResultV2(
             success: { [weak self] result in
                 print("牛逼成功了")
@@ -117,9 +124,12 @@ private extension HomeViewController {
                             break
                         }
                     }
+                    
+                    self?.actind.stopAnimating()
                 }
             },
-            failure: {
+            failure: { [weak self] in
+                self?.actind.stopAnimating()
                 print("call back failure")
         })
     }
