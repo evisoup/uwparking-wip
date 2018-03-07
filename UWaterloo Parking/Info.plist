@@ -34,7 +34,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Lots Info</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER).First</string>
+			<string>lots</string>
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconType</key>
@@ -42,15 +42,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Pin</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER).Second</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeSearch</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Search</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER).Third</string>
+			<string>pin</string>
 		</dict>
 	</array>
 	<key>UILaunchStoryboardName</key>

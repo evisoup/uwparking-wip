@@ -18,6 +18,8 @@
 		B72CB0071FD64FFB00C171FD /* UWAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CB0061FD64FFB00C171FD /* UWAPICaller.swift */; };
 		B72CB0081FD64FFB00C171FD /* UWAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72CB0061FD64FFB00C171FD /* UWAPICaller.swift */; };
 		B73684111C77BEA2005BA6DA /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73684101C77BEA2005BA6DA /* KDCircularProgress.swift */; };
+		B758AA46204F9167005D7B59 /* ShortcutIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758AA45204F9167005D7B59 /* ShortcutIdentifier.swift */; };
+		B758AA47204F9167005D7B59 /* ShortcutIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758AA45204F9167005D7B59 /* ShortcutIdentifier.swift */; };
 		B783B24D1C74DC7900A3B108 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B783B24C1C74DC7900A3B108 /* AppDelegate.swift */; };
 		B783B2541C74DC7900A3B108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B783B2521C74DC7900A3B108 /* Main.storyboard */; };
 		B783B2561C74DC7900A3B108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B783B2551C74DC7900A3B108 /* Assets.xcassets */; };
@@ -76,6 +78,7 @@
 		B72CB0031FD6468000C171FD /* jsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonParser.swift; sourceTree = "<group>"; };
 		B72CB0061FD64FFB00C171FD /* UWAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UWAPICaller.swift; sourceTree = "<group>"; };
 		B73684101C77BEA2005BA6DA /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
+		B758AA45204F9167005D7B59 /* ShortcutIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutIdentifier.swift; sourceTree = "<group>"; };
 		B783B2491C74DC7900A3B108 /* UWaterloo Parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UWaterloo Parking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B783B24C1C74DC7900A3B108 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B783B2531C74DC7900A3B108 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -145,6 +148,7 @@
 				B72CB0031FD6468000C171FD /* jsonParser.swift */,
 				B72CB0061FD64FFB00C171FD /* UWAPICaller.swift */,
 				B7D38D7E201AE1690005A688 /* APIKey.swift */,
+				B758AA45204F9167005D7B59 /* ShortcutIdentifier.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,7 +276,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Hengyi Liu";
 				TargetAttributes = {
 					B783B2481C74DC7900A3B108 = {
@@ -359,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B758AA46204F9167005D7B59 /* ShortcutIdentifier.swift in Sources */,
 				B72CB0071FD64FFB00C171FD /* UWAPICaller.swift in Sources */,
 				B7BF26721EC9564F00203ABA /* APIHandler.swift in Sources */,
 				B7D38D7F201AE1690005A688 /* APIKey.swift in Sources */,
@@ -383,6 +388,7 @@
 				B783B2771C7521AD00A3B108 /* TodayViewController.swift in Sources */,
 				B7D38D80201AE1690005A688 /* APIKey.swift in Sources */,
 				B72CB0081FD64FFB00C171FD /* UWAPICaller.swift in Sources */,
+				B758AA47204F9167005D7B59 /* ShortcutIdentifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,14 +438,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -479,14 +491,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
